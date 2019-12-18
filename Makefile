@@ -1,6 +1,7 @@
 CACHE_MOD1 	  := $${PWD}/cache
 CACHE_MOD2 	  := $${PWD}/go-cache
 CACHE_MOD3 	  := $${PWD}/gocache
+CACHE_MOD4 	  := $${PWD}/gache
 .DEFAULT_GOAL := help
 
 PHONY: all help test
@@ -12,7 +13,7 @@ init: ## initialize
 
 test: init ## The benchmark start.
 	@sudo purge; sync; sync;
-	@for CACHE_MOD in $(CACHE_MOD1) $(CACHE_MOD2) $(CACHE_MOD3); \
+	@for CACHE_MOD in $(CACHE_MOD1) $(CACHE_MOD2) $(CACHE_MOD3) $(CACHE_MOD4); \
 	do \
 		echo "Benchmark target: " $$CACHE_MOD; \
 		cd $$CACHE_MOD; \
